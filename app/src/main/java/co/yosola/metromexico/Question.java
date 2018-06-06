@@ -40,8 +40,14 @@ public class Question {
     }
 
     public boolean isCorrect(String answer) {
-        answer = Normalizer.normalize(answer, Normalizer.Form.NFC);
-        return mAnswers[0].equals(answer);
+        if(answer == null){
+            return false;
+        } else {
+            answer = Normalizer.normalize(answer, Normalizer.Form.NFC);
+            return mAnswers[0].equals(answer);
+        }
+
+
     }
 
     public boolean isCorrect(String[] answers) {

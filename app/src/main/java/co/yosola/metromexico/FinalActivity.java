@@ -2,11 +2,15 @@ package co.yosola.metromexico;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 public class FinalActivity extends AppCompatActivity {
 
@@ -26,10 +30,17 @@ public class FinalActivity extends AppCompatActivity {
         }
 
         //Set up the number of question and the current question
-        TextView finalProgress=(TextView) findViewById(R.id.score_text_view);
+
         int totalQuestions = questionary.getTotalQuestions();
         int correctAnswers = questionary.getTotalCorrectAnswers();
-        finalProgress.setText("Tuviste " + correctAnswers + " respuestas acertadas de un total de " + totalQuestions + " preguntas.");
+        String textToast = "Tuviste " + correctAnswers + " respuestas acertadas de un total de " + totalQuestions + " preguntas.";
+
+
+        Toast mytoast = Toast.makeText(FinalActivity.this, textToast, Toast.LENGTH_LONG);
+        mytoast.setGravity(Gravity.CENTER, 0, 0);
+        mytoast.show();
+
+
 
         Button startAgainButton = (Button) findViewById(R.id.button_start_again);
         startAgainButton.setOnClickListener(new View.OnClickListener() {
