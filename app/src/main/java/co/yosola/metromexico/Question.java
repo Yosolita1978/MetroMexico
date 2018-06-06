@@ -62,8 +62,16 @@ public class Question {
         return mAnswers.length;
     }
 
-    public Class getActivity() {
-        return MultipleAnswersActivity.class;
+    public Class getActivity(){
+        if(getAnswerCount() > 1){
+            return MultipleAnswersActivity.class;
+        } else if(getChoices().length == 2) {
+            return TrueFalseActivity.class;
+        } else if(getChoices().length > 2){
+            return RadioAnswerActivity.class;
+        } else{
+            return WrittenAnswerActivity.class;
+        }
     }
 
 }

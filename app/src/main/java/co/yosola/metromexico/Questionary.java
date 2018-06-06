@@ -19,7 +19,7 @@ public class Questionary {
     }
 
     private Questionary(Context context) {
-        mQuestions = new Question[1];
+        mQuestions = new Question[4];
 
         String[] questionOneChoices = context.getResources().getStringArray(R.array.question1_choices);
         String[] questionOneAnswers = context.getResources().getStringArray(R.array.question1_answers);
@@ -27,6 +27,24 @@ public class Questionary {
 
         Question questionOne = new Question(context.getString(R.string.question1_question), questionOneImage, questionOneChoices, questionOneAnswers);
         mQuestions[0] = questionOne;
+
+        String[] questionTwoChoices = {};
+        String[] questionTwoAnswers = {context.getString(R.string.question2_answer)};
+        Drawable questionTwoImage = context.getResources().getDrawable(R.drawable.atzcapozalco);
+        Question questionTwo = new Question(context.getString(R.string.question2_question), questionTwoImage, questionTwoChoices, questionTwoAnswers);
+        mQuestions[1] = questionTwo;
+
+        String[] questionThreeChoices = context.getResources().getStringArray(R.array.question3_choices);
+        String[] questionThreeAnswers = {context.getString(R.string.question3_answer)};
+        Drawable questionThreeImage = context.getResources().getDrawable(R.drawable.pinosuarez);
+        Question questionThree = new Question(context.getString(R.string.question3_question), questionThreeImage, questionThreeChoices, questionThreeAnswers);
+        mQuestions[2] = questionThree;
+
+        String[] questionFourChoices = context.getResources().getStringArray(R.array.question4_choices);
+        String[] questionFourAnswers = {context.getString(R.string.question4_answer)};
+        Drawable questionFourImage = context.getResources().getDrawable(R.drawable.balbuena);
+        Question questionFour = new Question(context.getString(R.string.question4_question), questionFourImage, questionFourChoices, questionFourAnswers);
+        mQuestions[3] = questionFour;
 
     }
 

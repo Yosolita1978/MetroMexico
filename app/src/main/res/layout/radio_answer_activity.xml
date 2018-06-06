@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true" >
 
     <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context="co.yosola.metromexico.MultipleAnswersActivity">
+        tools:context="com.yosola.android.mexicanquiz.MultipleAnswersActivity">
 
 
         <RelativeLayout
@@ -18,7 +18,7 @@
             android:background="@drawable/questiongradient">
 
             <ImageView
-                android:id="@+id/multiple_img"
+                android:id="@+id/radio_img"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
@@ -28,7 +28,7 @@
                 android:id="@+id/questionTextView"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                tools:text="@string/question1_question"
+                tools:text="@string/question4_question"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:background="@android:color/white"
@@ -39,57 +39,53 @@
 
         </RelativeLayout>
 
-        <CheckBox
-            android:id="@+id/checkboxFirstOption"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/radiobutton_options"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:paddingLeft="5dp"
-            android:paddingStart="5dp"
-            tools:text="@string/question1_choice1"
-            android:textSize="20sp" />
+            android:layout_weight="1">
 
-        <CheckBox
-            android:id="@+id/checkboxSecondOption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:paddingLeft="5dp"
-            android:paddingStart="5dp"
-            tools:text="@string/question1_choice2"
-            android:textSize="20sp" />
+            <RadioButton
+                android:id="@+id/choices1_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="36dp"
+                tools:text="@string/question4_choice1"
+                android:textSize="25sp" />
 
-        <CheckBox
-            android:id="@+id/checkboxThirdOption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:paddingLeft="5dp"
-            android:paddingStart="5dp"
-            tools:text="@string/question1_choice3"
-            android:textSize="20sp" />
+            <RadioButton
+                android:id="@+id/choices2_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                tools:text="@string/question4_choice2"
+                android:textSize="25sp" />
 
-        <CheckBox
-            android:id="@+id/checkboxFourOption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:paddingLeft="5dp"
-            android:paddingStart="5dp"
-            tools:text="@string/question1_choice4"
-            android:textSize="20sp" />
+            <RadioButton
+                android:id="@+id/choices3_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                tools:text="@string/question4_choice3"
+                android:textSize="25sp" />
+
+            <RadioButton
+                android:id="@+id/choices4_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                tools:text="@string/question4_choice4"
+                android:textSize="25sp" />
+
+        </RadioGroup>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -101,17 +97,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                tools:text="@string/text1of10"
+                tools:text="@string/text4of10"
                 android:textSize="15sp" />
 
-            <TextView
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/nextButton"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:text="@string/optionText"
-                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/nextButton"

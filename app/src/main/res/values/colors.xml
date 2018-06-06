@@ -10,5 +10,6 @@
     <color name="starquestion">#F4A97E</color>
     <color name="endquestion">#F5B089</color>
     <color name="colorProgressBackgroundTint">#625A75</color>
-    <color name="colorProgressTint">#BA6D60</color>
+    <color name="colorProgressTint">#E5CA60</color>
+    <color name="white">#ffffff</color>
 </resources>

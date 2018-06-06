@@ -3,6 +3,10 @@
 
     <string name="quiz">Quiz</string>
 
+    <string name="final_text_won">Estas en un vagón del metro y no has podido salir de aquí</string>
+
+    <string name="final_text_lost">Oye chofer llévame a donde quieras, pero no me lleves hacia el metro </string>
+
     <string name="nextTextButton">Next</string>
     <string name="previousTextButton">Previous</string>
 
@@ -33,5 +37,50 @@
     </string-array>
 
     <string name="progressBarValue1">10</string>
+
+    <!-- Question 2 -->
+    <string name="text2of10">2/10</string>
+    <string name="progressBarValue2">20</string>
+    <string name="question2_question">¿Cómo se llama esta estación de la Línea 6 cuyo emblema es una hormiga?</string>
+    <string name="question2_hint">Escriba su respuesta acá</string>on
+    <string name="question2_answer">Azcapotzalco</string>
+
+    <!-- Question 3 -->
+    <string name="text3of10">3/10</string>
+    <string name="progressBarValue3">30</string>
+    <string name="question3_question">¿El ícono de Pino Suárez representa la pirámide del dios del viento ehécatl?</string>
+    <string name="question3_true">Verdadero</string>
+    <string name="question3_false">Falso</string>
+
+    <string-array name="question3_choices">
+        <item>@string/question3_true</item>
+        <item>@string/question3_false</item>
+    </string-array>
+
+    <string name="question3_answer">@string/question3_true</string>
+
+    <!-- Question 4 -->
+    <string name="text4of10">4/10</string>
+    <string name="progressBarValue4">40</string>
+    <string name="question4_question">¿ La estación Jardín Balbuena rinde homenaje al poeta español ?</string>
+    <string name="question4_choice1">Bernardo de Balbuena </string>
+    <string name="question4_choice2">Adolfo  Sánchez Vásquez </string>
+    <string name="question4_choice3">Manuel Balbuena Altolaguirre </string>
+    <string name="question4_choice4">Antonio Machado </string>
+
+
+    <string-array name="question4_choices">
+        <item>@string/question4_choice1 </item>
+        <item>@string/question4_choice2 </item>
+        <item>@string/question4_choice3 </item>
+        <item>@string/question4_choice4 </item>
+    </string-array>
+
+    <string name="question4_answer">@string/question4_choice1</string>
+
+    <string name="score_text"> Tuviste XXX de XXX respuestas acertadas</string>
+
+
+
 
 </resources>

@@ -18,6 +18,18 @@
         </activity>
         <activity android:name="co.yosola.metromexico.MultipleAnswersActivity"
             android:label="@string/quiz"/>
+
+        <activity android:name="co.yosola.metromexico.WrittenAnswerActivity"
+            android:label="@string/quiz"/>
+
+        <activity android:name="co.yosola.metromexico.FinalActivity"
+            android:label="@string/quiz"/>
+
+        <activity android:name="co.yosola.metromexico.TrueFalseActivity"
+            android:label="@string/quiz"/>
+
+        <activity android:name="co.yosola.metromexico.RadioAnswerActivity"
+            android:label="@string/quiz"/>
     </application>
 
 </manifest>

@@ -9,8 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context="co.yosola.metromexico.MultipleAnswersActivity">
-
+        tools:context="co.yosola.metromexico.WrittenAnswerActivity">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -18,7 +17,7 @@
             android:background="@drawable/questiongradient">
 
             <ImageView
-                android:id="@+id/multiple_img"
+                android:id="@+id/written_img"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
@@ -28,8 +27,8 @@
                 android:id="@+id/questionTextView"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                tools:text="@string/question1_question"
-                android:textSize="25sp"
+                tools:text="@string/question2_question"
+                android:textSize="23sp"
                 android:textStyle="bold"
                 android:background="@android:color/white"
                 android:layout_alignParentBottom="true"
@@ -39,79 +38,41 @@
 
         </RelativeLayout>
 
-        <CheckBox
-            android:id="@+id/checkboxFirstOption"
-            android:layout_width="wrap_content"
+
+        <EditText
+            android:id="@+id/user_text_input"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
             android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:paddingLeft="5dp"
-            android:paddingStart="5dp"
-            tools:text="@string/question1_choice1"
+            android:layout_weight="0"
+            android:maxLength="45"
+            android:hint="@string/question2_hint"
+            android:inputType="textCapWords"
             android:textSize="20sp" />
 
-        <CheckBox
-            android:id="@+id/checkboxSecondOption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:paddingLeft="5dp"
-            android:paddingStart="5dp"
-            tools:text="@string/question1_choice2"
-            android:textSize="20sp" />
 
-        <CheckBox
-            android:id="@+id/checkboxThirdOption"
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:paddingLeft="5dp"
-            android:paddingStart="5dp"
-            tools:text="@string/question1_choice3"
-            android:textSize="20sp" />
-
-        <CheckBox
-            android:id="@+id/checkboxFourOption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:paddingLeft="5dp"
-            android:paddingStart="5dp"
-            tools:text="@string/question1_choice4"
-            android:textSize="20sp" />
+            android:layout_weight="3" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0">
 
+
             <TextView
                 android:id="@+id/currentquestion_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                tools:text="@string/text1of10"
+                android:layout_marginTop="10dp"
+                tools:text="@string/text2of10"
                 android:textSize="15sp" />
-
-            <TextView
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/nextButton"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:text="@string/optionText"
-                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/nextButton"
