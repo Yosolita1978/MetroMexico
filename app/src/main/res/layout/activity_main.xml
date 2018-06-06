@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/subway"
+    tools:context="co.yosola.metromexico.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="591dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/fontcolor"
+            android:textSize="35sp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:shadowColor="@color/gray"/>
+
+
+        <Button
+            android:id="@+id/button_start"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/buttonstyle"
+            android:text="Start"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="19dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

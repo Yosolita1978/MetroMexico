@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Memorias del Metro de México</string>
+
+    <string name="quiz">Quiz</string>
+
+    <string name="nextTextButton">Next</string>
+    <string name="previousTextButton">Previous</string>
+
+    <string name="question1">Question 1</string>
+    <string name="optionText">Puede escoger más de una opción</string>
+
+    <!-- Question 1 -->
+    <string name="text1of10">1/10</string>
+    <string name="question1_question">La silueta de esta estación se relaciona simbólicamente con ?</string>
+
+    <!-- Question 1 xml -->
+
+    <string name="question1_choice1">El sombrero de una bruja </string>
+    <string name="question1_choice2">Una cigüeña  </string>
+    <string name="question1_choice3">El nombre Eugenia, que significa “la bien nacida” </string>
+    <string name="question1_choice4">Un pato en el agua </string>
+
+    <string-array name="question1_choices">
+        <item>@string/question1_choice1 </item>
+        <item>@string/question1_choice2 </item>
+        <item>@string/question1_choice3</item>
+        <item>@string/question1_choice4</item>
+    </string-array>
+
+    <string-array name="question1_answers">
+        <item>@string/question1_choice2</item>
+        <item>@string/question1_choice3</item>
+    </string-array>
+
+    <string name="progressBarValue1">10</string>
+
+</resources>

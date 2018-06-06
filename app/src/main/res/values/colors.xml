@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f57c00</color>
+    <color name="colorPrimaryDark">#bb4d00</color>
+    <color name="colorAccent">#1976d2</color>
+    <color name="startbtn">#f57c00</color>
+    <color name="endbtn">#ef6c00</color>
+    <color name="fontcolor">#000000</color>
+    <color name="gray">#e0e0e0</color>
+    <color name="starquestion">#F4A97E</color>
+    <color name="endquestion">#F5B089</color>
+    <color name="colorProgressBackgroundTint">#625A75</color>
+    <color name="colorProgressTint">#BA6D60</color>
+</resources>
