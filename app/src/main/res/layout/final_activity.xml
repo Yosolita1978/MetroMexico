@@ -8,7 +8,7 @@
     android:layout_centerHorizontal="true"
     android:background="@drawable/crowedmetro"
     android:orientation="vertical"
-    tools:context="co.yosola.metromexico.FinalActivity">
+    tools:context="co.metroquiz.metromexico.FinalActivity">
 
 
     <RelativeLayout

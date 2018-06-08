@@ -1,4 +1,4 @@
-package co.yosola.metromexico;
+package co.metroquiz.metromexico;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -8,19 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.RadioButton;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+public class TrueFalseActivity extends AppCompatActivity {
 
-public class RadioAnswerActivity extends AppCompatActivity {
+    String userAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Set the content of the activity to use the radio_answers_activity.xml layout file
-        setContentView(R.layout.radio_answer_activity);
+        // Set the content of the activity to use the true_false_activity.xml layout file
+        setContentView(R.layout.true_false_activity);
 
         final Questionary questionary = Questionary.getQuestionary(this);
         Question currentQuestion = questionary.getCurrentQuestion();
@@ -38,31 +37,56 @@ public class RadioAnswerActivity extends AppCompatActivity {
         int currentNumberQuestion = questionary.getNumberCurrentQuestion();
         quizProgress.setText(currentNumberQuestion + "/" + totalQuestions);
 
+
+        final Button trueButton = (Button) findViewById(R.id.true_button);
+        final Button falseButton = (Button) findViewById(R.id.false_button);
+
+        final int selectedColor = getResources().getColor(R.color.colorAccent);
+        final int unselectedColor = getResources().getColor(R.color.gray);
+
+        //Create an event listener for the true_button
+        trueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                trueButton.setBackgroundColor(selectedColor);
+                falseButton.setBackgroundColor(unselectedColor);
+
+                userAnswer = trueButton.getText().toString();
+            }
+        });
+
+        //Create an event listener for the false_button
+        falseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                falseButton.setBackgroundColor(selectedColor);
+                trueButton.setBackgroundColor(unselectedColor);
+
+                userAnswer = falseButton.getText().toString();
+            }
+        });
+
+
+        // Create an event listener for the next button
         Button nextButton = (Button) findViewById(R.id.nextButton);
+
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                /* Get the Answers from the user */
-                int[] radioButtonsIds = {R.id.choices1_textview, R.id.choices2_textview, R.id.choices3_textview, R.id.choices4_textview};
-                ArrayList<String> userAnswer = new ArrayList<>();
-                for (int i = 0; i < radioButtonsIds.length; i++) {
-                    RadioButton answerText = (RadioButton) findViewById(radioButtonsIds[i]);
-                    if (answerText.isChecked()) {
-                        userAnswer.add(answerText.getText().toString());
-                    }
-                }
-                //Check the Answer before going to the next Question
-                questionary.checkAnswer(userAnswer.toArray(new String[0]));
+                ////Check the Answer before going to the next Question
+                questionary.checkAnswer(userAnswer);
                 Question nextQuestion = questionary.getNextQuestion();
                 Intent nextIntent;
                 if (nextQuestion == null) {
-                    nextIntent = new Intent(RadioAnswerActivity.this, FinalActivity.class);
+                    nextIntent = new Intent(TrueFalseActivity.this, FinalActivity.class);
                 } else {
-                    nextIntent = new Intent(RadioAnswerActivity.this, nextQuestion.getActivity());
+                    nextIntent = new Intent(TrueFalseActivity.this, nextQuestion.getActivity());
                 }
                 startActivity(nextIntent);
+
                 finish();
+
             }
         });
     }
@@ -79,7 +103,7 @@ public class RadioAnswerActivity extends AppCompatActivity {
      * Displays the given Choices.
      */
     public void displayChoices(String[] choices) {
-        int[] answerIds = {R.id.choices1_textview, R.id.choices2_textview, R.id.choices3_textview, R.id.choices4_textview};
+        int[] answerIds = {R.id.true_button, R.id.false_button};
         for (int i = 0; i < choices.length; i++) {
             TextView answerView = (TextView) findViewById(answerIds[i]);
             answerView.setText(choices[i]);
@@ -90,7 +114,7 @@ public class RadioAnswerActivity extends AppCompatActivity {
      * Displays the given Img.
      */
     public void displayImage(Drawable imageResource) {
-        ImageView imgResource = (ImageView) findViewById(R.id.radio_img);
+        ImageView imgResource = (ImageView) findViewById(R.id.true_img);
         imgResource.setImageDrawable(imageResource);
 
     }

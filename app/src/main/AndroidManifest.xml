@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="co.yosola.metromexico">
+    package="co.metroquiz.metromexico">
 
     <application
         android:allowBackup="true"
@@ -16,19 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="co.yosola.metromexico.MultipleAnswersActivity"
+        <activity android:name="co.metroquiz.metromexico.MultipleAnswersActivity"
             android:label="@string/quiz"/>
 
-        <activity android:name="co.yosola.metromexico.WrittenAnswerActivity"
+        <activity android:name="co.metroquiz.metromexico.WrittenAnswerActivity"
             android:label="@string/quiz"/>
 
-        <activity android:name="co.yosola.metromexico.FinalActivity"
+        <activity android:name="co.metroquiz.metromexico.FinalActivity"
             android:label="@string/quiz"/>
 
-        <activity android:name="co.yosola.metromexico.TrueFalseActivity"
+        <activity android:name="co.metroquiz.metromexico.TrueFalseActivity"
             android:label="@string/quiz"/>
 
-        <activity android:name="co.yosola.metromexico.RadioAnswerActivity"
+        <activity android:name="co.metroquiz.metromexico.RadioAnswerActivity"
             android:label="@string/quiz"/>
     </application>
 

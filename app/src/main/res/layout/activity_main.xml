@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/subway"
     android:orientation="vertical"
-    tools:context="co.yosola.metromexico.MainActivity">
+    tools:context="co.metroquiz.metromexico.MainActivity">
 
 
     <RelativeLayout

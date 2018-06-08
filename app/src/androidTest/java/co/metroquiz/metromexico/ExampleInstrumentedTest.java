@@ -1,4 +1,4 @@
-package co.yosola.metromexico;
+package co.metroquiz.metromexico;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

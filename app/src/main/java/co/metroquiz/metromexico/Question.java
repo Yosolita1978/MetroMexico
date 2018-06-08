@@ -1,4 +1,4 @@
-package co.yosola.metromexico;
+package co.metroquiz.metromexico;
 
 import android.graphics.drawable.Drawable;
 
