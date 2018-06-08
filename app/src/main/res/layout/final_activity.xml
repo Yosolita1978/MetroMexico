@@ -5,9 +5,9 @@
     android:id="@+id/background_layout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:layout_centerHorizontal="true"
     android:background="@drawable/crowedmetro"
+    android:orientation="vertical"
     tools:context="co.yosola.metromexico.FinalActivity">
 
 
@@ -26,8 +26,8 @@
             android:layout_marginBottom="60dp"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="@color/white"
             android:textAppearance="@style/AlertDialog.AppCompat"
+            android:textColor="@color/white"
             android:textSize="30sp"
             tools:text="@string/final_text_won" />
 
@@ -46,6 +46,6 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-
     </RelativeLayout>
+
 </LinearLayout>

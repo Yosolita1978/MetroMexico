@@ -11,15 +11,8 @@ public class Questionary {
     private int mCurrentQuestionIndex = 0;
     private int mNumberCorrectAnswers = 0;
 
-    public static Questionary getQuestionary(Context context){
-        if(questionary == null){
-            questionary = new Questionary(context);
-        }
-        return questionary;
-    }
-
     private Questionary(Context context) {
-        mQuestions = new Question[4];
+        mQuestions = new Question[10];
 
         String[] questionOneChoices = context.getResources().getStringArray(R.array.question1_choices);
         String[] questionOneAnswers = context.getResources().getStringArray(R.array.question1_answers);
@@ -46,14 +39,57 @@ public class Questionary {
         Question questionFour = new Question(context.getString(R.string.question4_question), questionFourImage, questionFourChoices, questionFourAnswers);
         mQuestions[3] = questionFour;
 
+        String[] questionFiveChoices = context.getResources().getStringArray(R.array.question5_choices);
+        String[] questionFiveAnswers = {context.getString(R.string.question5_answer)};
+        Drawable questionFivaImage = context.getResources().getDrawable(R.drawable.cuitlahuac);
+        Question questionFive = new Question(context.getString(R.string.question5_question), questionFivaImage, questionFiveChoices, questionFiveAnswers);
+        mQuestions[4] = questionFive;
+
+        String[] questionSixChoices = {};
+        String[] questionSixAnswers = {context.getString(R.string.question6_answer)};
+        Drawable questionSixImage = context.getResources().getDrawable(R.drawable.copilco);
+        Question questionSix = new Question(context.getString(R.string.question6_question), questionSixImage, questionSixChoices, questionSixAnswers);
+        mQuestions[5] = questionSix;
+
+        String[] questionSevenChoices = context.getResources().getStringArray(R.array.question7_choices);
+        String[] questionSevenAnswers = {context.getString(R.string.question7_answer)};
+        Drawable questionSevenImage = context.getResources().getDrawable(R.drawable.tezonco);
+        Question questionSeven = new Question(context.getString(R.string.question7_question), questionSevenImage, questionSevenChoices, questionSevenAnswers);
+        mQuestions[6] = questionSeven;
+
+        String[] questionEightChoices = context.getResources().getStringArray(R.array.question8_choices);
+        String[] questionEightAnswers = {context.getString(R.string.question8_answer)};
+        Drawable questionEightImage = context.getResources().getDrawable(R.drawable.tezozomoc);
+        Question questionEight = new Question(context.getString(R.string.question8_question), questionEightImage, questionEightChoices, questionEightAnswers);
+        mQuestions[7] = questionEight;
+
+        String[] questionNineChoices = context.getResources().getStringArray(R.array.question9_choices);
+        String[] questionNineAnswers = {context.getString(R.string.question9_answer)};
+        Drawable questionNineImage = context.getResources().getDrawable(R.drawable.guelatao);
+        Question questionNine = new Question(context.getString(R.string.question9_question), questionNineImage, questionNineChoices, questionNineAnswers);
+        mQuestions[8] = questionNine;
+
+        String[] questionTenChoices = context.getResources().getStringArray(R.array.question10_choices);
+        String[] questionTenAnswers = {context.getString(R.string.question10_answer)};
+        Drawable questionTenImage = context.getResources().getDrawable(R.drawable.puebla);
+        Question questionTen = new Question(context.getString(R.string.question10_question), questionTenImage, questionTenChoices, questionTenAnswers);
+        mQuestions[9] = questionTen;
+
     }
 
-    public Question getCurrentQuestion(){
+    public static Questionary getQuestionary(Context context) {
+        if (questionary == null) {
+            questionary = new Questionary(context);
+        }
+        return questionary;
+    }
+
+    public Question getCurrentQuestion() {
         return mQuestions[mCurrentQuestionIndex];
     }
 
-    public  Question getNextQuestion(){
-        if(mCurrentQuestionIndex == mQuestions.length - 1){
+    public Question getNextQuestion() {
+        if (mCurrentQuestionIndex == mQuestions.length - 1) {
             return null;
         } else {
             mCurrentQuestionIndex += 1;
@@ -61,52 +97,50 @@ public class Questionary {
         }
     }
 
-    public void checkAnswer(String[] answers){
+    public void checkAnswer(String[] answers) {
         Question question = getCurrentQuestion();
-        if(question.isCorrect(answers)){
+        if (question.isCorrect(answers)) {
             mNumberCorrectAnswers += 1;
         }
     }
 
-    public void checkAnswer(String answer){
+    public void checkAnswer(String answer) {
         Question question = getCurrentQuestion();
-        if(question.isCorrect(answer)){
+        if (question.isCorrect(answer)) {
             mNumberCorrectAnswers += 1;
         }
     }
 
-    public int getProgress(){
+    public int getProgress() {
         int totalQuestions = mQuestions.length;
         int progress = (mCurrentQuestionIndex + 1) * 100 / totalQuestions;
-        return  progress;
+        return progress;
     }
 
-    public int getNumberCurrentQuestion(){
+    public int getNumberCurrentQuestion() {
         int currentQuestion = (mCurrentQuestionIndex + 1);
         return currentQuestion;
     }
 
-    public int getTotalQuestions(){
+    public int getTotalQuestions() {
         return mQuestions.length;
     }
 
-    public int getTotalCorrectAnswers (){
+    public int getTotalCorrectAnswers() {
         return mNumberCorrectAnswers;
     }
 
-    public boolean hasPassed(){
+    public boolean hasPassed() {
         int totalQuestions = mQuestions.length;
         int totalCorrectAnswers = mNumberCorrectAnswers;
         int wrongAnswers = totalQuestions - totalCorrectAnswers;
         return wrongAnswers <= 2;
     }
 
-    public void reset(){
+    public void reset() {
         mNumberCorrectAnswers = 0;
         mCurrentQuestionIndex = 0;
     }
-
-
 
 
 }

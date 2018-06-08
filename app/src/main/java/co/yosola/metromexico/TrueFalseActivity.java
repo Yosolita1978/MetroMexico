@@ -28,11 +28,11 @@ public class TrueFalseActivity extends AppCompatActivity {
         displayImage(currentQuestion.getImageResource());
 
         //Set up the progress Bar progress
-        ProgressBar quizProgressBar=(ProgressBar)findViewById(R.id.determinateBar);
+        ProgressBar quizProgressBar = (ProgressBar) findViewById(R.id.determinateBar);
         quizProgressBar.setProgress(questionary.getProgress());
 
         //Set up the number of question and the current question
-        TextView quizProgress=(TextView) findViewById(R.id.currentquestion_view);
+        TextView quizProgress = (TextView) findViewById(R.id.currentquestion_view);
         int totalQuestions = questionary.getTotalQuestions();
         int currentNumberQuestion = questionary.getNumberCurrentQuestion();
         quizProgress.setText(currentNumberQuestion + "/" + totalQuestions);
@@ -67,7 +67,6 @@ public class TrueFalseActivity extends AppCompatActivity {
         });
 
 
-
         // Create an event listener for the next button
         Button nextButton = (Button) findViewById(R.id.nextButton);
 
@@ -79,7 +78,7 @@ public class TrueFalseActivity extends AppCompatActivity {
                 questionary.checkAnswer(userAnswer);
                 Question nextQuestion = questionary.getNextQuestion();
                 Intent nextIntent;
-                if(nextQuestion == null){
+                if (nextQuestion == null) {
                     nextIntent = new Intent(TrueFalseActivity.this, FinalActivity.class);
                 } else {
                     nextIntent = new Intent(TrueFalseActivity.this, nextQuestion.getActivity());
@@ -103,9 +102,9 @@ public class TrueFalseActivity extends AppCompatActivity {
     /**
      * Displays the given Choices.
      */
-    public void displayChoices(String[] choices){
+    public void displayChoices(String[] choices) {
         int[] answerIds = {R.id.true_button, R.id.false_button};
-        for(int i = 0; i < choices.length; i++){
+        for (int i = 0; i < choices.length; i++) {
             TextView answerView = (TextView) findViewById(answerIds[i]);
             answerView.setText(choices[i]);
         }

@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">Memorias del Metro de México</string>
+
+    <string name="app_name">Metro Quiz</string>
+
+    <string name="quiz_name">Memorias del Metro de México</string>
 
     <string name="quiz">Quiz</string>
 
@@ -77,6 +80,102 @@
     </string-array>
 
     <string name="question4_answer">@string/question4_choice1</string>
+
+    <!-- Question 5 -->
+    <string name="text5of10">5/10</string>
+    <string name="progressBarValue5">50</string>
+    <string name="question5_question">¿ Esta estación se llama, en honor al décimo y penúltimo tlatoani azteca: ?</string>
+    <string name="question5_choice1">Cuauhtémoc </string>
+    <string name="question5_choice2">Moctezuma </string>
+    <string name="question5_choice3">Cuitláhuac </string>
+    <string name="question5_choice4">Tizoc </string>
+
+
+    <string-array name="question5_choices">
+        <item>@string/question5_choice1 </item>
+        <item>@string/question5_choice2 </item>
+        <item>@string/question5_choice3 </item>
+        <item>@string/question5_choice4 </item>
+    </string-array>
+
+    <string name="question5_answer">@string/question5_choice3</string>
+
+    <!-- Question 6 -->
+    <string name="text6of10">6/10</string>
+    <string name="progressBarValue6">60</string>
+    <string name="question6_question">Escriba el nombre de esta estación </string>
+    <string name="question6_hint">Escriba su respuesta acá</string>
+    <string name="question6_answer">Copilco</string>
+
+    <!-- Question 7 -->
+    <string name="text7of10">7/10</string>
+    <string name="progressBarValue7">70</string>
+    <string name="question7_question">¿ Tezonco es una de las poblaciones más antiguas de: ?</string>
+    <string name="question7_choice1">Iztapalapa </string>
+    <string name="question7_choice2">El Estado de México </string>
+    <string name="question7_choice3">Tláhuac </string>
+    <string name="question7_choice4">Azcapotzalco </string>
+
+
+    <string-array name="question7_choices">
+        <item>@string/question7_choice1 </item>
+        <item>@string/question7_choice2 </item>
+        <item>@string/question7_choice3 </item>
+        <item>@string/question7_choice4 </item>
+    </string-array>
+
+    <string name="question7_answer">@string/question7_choice1</string>
+
+    <!-- Question 8 -->
+    <string name="text8of10">8/10</string>
+    <string name="progressBarValue8">80</string>
+    <string name="question8_question">¿ El metro Tezozomoc está ubicado en la delegación: ?</string>
+    <string name="question8_choice1">Iztapalapa </string>
+    <string name="question8_choice2">Azcapotzalco </string>
+    <string name="question8_choice3">Tláhuac </string>
+    <string name="question8_choice4">Cuauhtémoc </string>
+
+
+    <string-array name="question8_choices">
+        <item>@string/question8_choice1 </item>
+        <item>@string/question8_choice2 </item>
+        <item>@string/question8_choice3 </item>
+        <item>@string/question8_choice4 </item>
+    </string-array>
+
+    <string name="question8_answer">@string/question8_choice2</string>
+
+    <!-- Question 9 -->
+    <string name="text9of10">9/10</string>
+    <string name="progressBarValue9">90</string>
+    <string name="question9_question">¿ Este es el ícono del Metro Benito Juárez ?</string>
+    <string name="question9_choice1">Verdadero </string>
+    <string name="question9_choice2">Falso </string>
+
+    <string-array name="question9_choices">
+        <item>@string/question9_choice1 </item>
+        <item>@string/question9_choice2 </item>
+    </string-array>
+
+    <string name="question9_answer">@string/question9_choice2</string>
+
+    <!-- Question 10 -->
+    <string name="text10of10">10/10</string>
+    <string name="progressBarValue10">100</string>
+    <string name="question10_question">¿ Este es el ícono de la estación ?</string>
+    <string name="question10_choice1">Metro Talismán </string>
+    <string name="question10_choice2">Metro Villa de Cortés </string>
+    <string name="question10_choice3">Metro Puebla </string>
+    <string name="question10_choice4">Metro La Merced </string>
+
+    <string-array name="question10_choices">
+        <item>@string/question10_choice1 </item>
+        <item>@string/question10_choice2 </item>
+        <item>@string/question10_choice3 </item>
+        <item>@string/question10_choice4 </item>
+    </string-array>
+
+    <string name="question10_answer">@string/question10_choice3</string>
 
     <string name="score_text"> Tuviste XXX de XXX respuestas acertadas</string>
 

@@ -40,14 +40,12 @@ public class Question {
     }
 
     public boolean isCorrect(String answer) {
-        if(answer == null){
+        if (answer == null) {
             return false;
         } else {
             answer = Normalizer.normalize(answer, Normalizer.Form.NFC);
             return mAnswers[0].equals(answer);
         }
-
-
     }
 
     public boolean isCorrect(String[] answers) {
@@ -68,14 +66,14 @@ public class Question {
         return mAnswers.length;
     }
 
-    public Class getActivity(){
-        if(getAnswerCount() > 1){
+    public Class getActivity() {
+        if (getAnswerCount() > 1) {
             return MultipleAnswersActivity.class;
-        } else if(getChoices().length == 2) {
+        } else if (getChoices().length == 2) {
             return TrueFalseActivity.class;
-        } else if(getChoices().length > 2){
+        } else if (getChoices().length > 2) {
             return RadioAnswerActivity.class;
-        } else{
+        } else {
             return WrittenAnswerActivity.class;
         }
     }

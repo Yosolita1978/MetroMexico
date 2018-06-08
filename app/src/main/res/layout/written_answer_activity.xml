@@ -21,20 +21,20 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"/>
+                android:layout_marginBottom="15dp" />
 
             <TextView
                 android:id="@+id/questionTextView"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                tools:text="@string/question2_question"
-                android:textSize="23sp"
-                android:textStyle="bold"
-                android:background="@android:color/white"
                 android:layout_alignParentBottom="true"
+                android:background="@android:color/white"
+                android:gravity="center"
                 android:shadowRadius="10"
                 android:textColor="@android:color/background_dark"
-                android:gravity="center"/>
+                android:textSize="23sp"
+                android:textStyle="bold"
+                tools:text="@string/question2_question" />
 
         </RelativeLayout>
 
@@ -48,9 +48,9 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="16dp"
             android:layout_weight="0"
-            android:maxLength="45"
             android:hint="@string/question2_hint"
             android:inputType="textCapWords"
+            android:maxLength="45"
             android:textSize="20sp" />
 
 
@@ -71,23 +71,23 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                tools:text="@string/text2of10"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                tools:text="@string/text2of10" />
 
             <Button
                 android:id="@+id/nextButton"
+                style="@style/Widget.AppCompat.ImageButton"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_marginBottom="16dp"
-                android:layout_marginRight="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/nextTextButton"
-                android:textSize="20sp"
-                android:textColor="@android:color/white"
+                android:layout_marginRight="16dp"
                 android:background="@drawable/buttonstyle"
-                style="@style/Widget.AppCompat.ImageButton"/>
+                android:text="@string/nextTextButton"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
 
         </RelativeLayout>
 

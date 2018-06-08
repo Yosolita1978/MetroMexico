@@ -21,11 +21,11 @@ public class FinalActivity extends AppCompatActivity {
         setContentView(R.layout.final_activity);
 
         final Questionary questionary = Questionary.getQuestionary(this);
-        if(questionary.hasPassed()){
-            TextView finalText = (TextView)findViewById(R.id.final_text_view);
+        if (questionary.hasPassed()) {
+            TextView finalText = (TextView) findViewById(R.id.final_text_view);
             finalText.setText(R.string.final_text_won);
         } else {
-            TextView finalText = (TextView)findViewById(R.id.final_text_view);
+            TextView finalText = (TextView) findViewById(R.id.final_text_view);
             finalText.setText(R.string.final_text_lost);
         }
 
@@ -39,7 +39,6 @@ public class FinalActivity extends AppCompatActivity {
         Toast mytoast = Toast.makeText(FinalActivity.this, textToast, Toast.LENGTH_LONG);
         mytoast.setGravity(Gravity.CENTER, 0, 0);
         mytoast.show();
-
 
 
         Button startAgainButton = (Button) findViewById(R.id.button_start_again);

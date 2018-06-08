@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true" >
+    android:fillViewport="true">
 
     <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -22,20 +22,20 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"/>
+                android:layout_marginBottom="15dp" />
 
             <TextView
                 android:id="@+id/questionTextView"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                tools:text="@string/question4_question"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:background="@android:color/white"
                 android:layout_alignParentBottom="true"
+                android:background="@android:color/white"
+                android:gravity="center"
                 android:shadowRadius="10"
                 android:textColor="@android:color/background_dark"
-                android:gravity="center"/>
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:text="@string/question4_question" />
 
         </RelativeLayout>
 
@@ -52,38 +52,38 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="36dp"
-                tools:text="@string/question4_choice1"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                tools:text="@string/question4_choice1" />
 
             <RadioButton
                 android:id="@+id/choices2_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginStart="25dp"
-                tools:text="@string/question4_choice2"
-                android:textSize="25sp" />
+                android:layout_marginTop="10dp"
+                android:textSize="25sp"
+                tools:text="@string/question4_choice2" />
 
             <RadioButton
                 android:id="@+id/choices3_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginStart="25dp"
-                tools:text="@string/question4_choice3"
-                android:textSize="25sp" />
+                android:layout_marginTop="10dp"
+                android:textSize="25sp"
+                tools:text="@string/question4_choice3" />
 
             <RadioButton
                 android:id="@+id/choices4_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginStart="25dp"
-                tools:text="@string/question4_choice4"
-                android:textSize="25sp" />
+                android:layout_marginTop="10dp"
+                android:textSize="25sp"
+                tools:text="@string/question4_choice4" />
 
         </RadioGroup>
 
@@ -97,24 +97,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                tools:text="@string/text4of10"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                tools:text="@string/text4of10" />
 
 
             <Button
                 android:id="@+id/nextButton"
+                style="@style/Widget.AppCompat.ImageButton"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_marginBottom="16dp"
-                android:layout_marginRight="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/nextTextButton"
-                android:textSize="20sp"
-                android:textColor="@android:color/white"
+                android:layout_marginRight="16dp"
                 android:background="@drawable/buttonstyle"
-                style="@style/Widget.AppCompat.ImageButton"/>
+                android:text="@string/nextTextButton"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
 
         </RelativeLayout>
 

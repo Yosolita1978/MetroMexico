@@ -22,20 +22,20 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"/>
+                android:layout_marginBottom="15dp" />
 
             <TextView
                 android:id="@+id/questionTextView"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                tools:text="@string/question1_question"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:background="@android:color/white"
                 android:layout_alignParentBottom="true"
+                android:background="@android:color/white"
+                android:gravity="center"
                 android:shadowRadius="10"
                 android:textColor="@android:color/background_dark"
-                android:gravity="center"/>
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:text="@string/question1_question" />
 
         </RelativeLayout>
 
@@ -49,8 +49,8 @@
             android:layout_weight="1"
             android:paddingLeft="5dp"
             android:paddingStart="5dp"
-            tools:text="@string/question1_choice1"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:text="@string/question1_choice1" />
 
         <CheckBox
             android:id="@+id/checkboxSecondOption"
@@ -62,8 +62,8 @@
             android:layout_weight="1"
             android:paddingLeft="5dp"
             android:paddingStart="5dp"
-            tools:text="@string/question1_choice2"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:text="@string/question1_choice2" />
 
         <CheckBox
             android:id="@+id/checkboxThirdOption"
@@ -75,8 +75,8 @@
             android:layout_weight="1"
             android:paddingLeft="5dp"
             android:paddingStart="5dp"
-            tools:text="@string/question1_choice3"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:text="@string/question1_choice3" />
 
         <CheckBox
             android:id="@+id/checkboxFourOption"
@@ -88,8 +88,8 @@
             android:layout_weight="1"
             android:paddingLeft="5dp"
             android:paddingStart="5dp"
-            tools:text="@string/question1_choice4"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:text="@string/question1_choice4" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -101,8 +101,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                tools:text="@string/text1of10"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                tools:text="@string/text1of10" />
 
             <TextView
                 android:layout_width="190dp"
@@ -111,22 +111,23 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:text="@string/optionText"
+                android:textColor="@color/fontcolor"
                 android:textSize="12sp" />
 
             <Button
                 android:id="@+id/nextButton"
+                style="@style/Widget.AppCompat.ImageButton"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_marginBottom="16dp"
-                android:layout_marginRight="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/nextTextButton"
-                android:textSize="20sp"
-                android:textColor="@android:color/white"
+                android:layout_marginRight="16dp"
                 android:background="@drawable/buttonstyle"
-                style="@style/Widget.AppCompat.ImageButton"/>
+                android:text="@string/nextTextButton"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
 
         </RelativeLayout>
 

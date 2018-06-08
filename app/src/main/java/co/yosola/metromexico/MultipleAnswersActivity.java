@@ -35,14 +35,15 @@ public class MultipleAnswersActivity extends AppCompatActivity {
         displayImage(currentQuestion.getImageResource());
 
         //Set up the progress Bar progress
-        ProgressBar quizProgressBar=(ProgressBar)findViewById(R.id.determinateBar);
+        ProgressBar quizProgressBar = (ProgressBar) findViewById(R.id.determinateBar);
         quizProgressBar.setProgress(questionary.getProgress());
 
         //Set up the number of question and the current question
-        TextView quizProgress=(TextView) findViewById(R.id.currentquestion_view);
+        TextView quizProgress = (TextView) findViewById(R.id.currentquestion_view);
         int totalQuestions = questionary.getTotalQuestions();
         int currentNumberQuestion = questionary.getNumberCurrentQuestion();
         quizProgress.setText(currentNumberQuestion + "/" + totalQuestions);
+
 
         Button nextButton = (Button) findViewById(R.id.nextButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +64,7 @@ public class MultipleAnswersActivity extends AppCompatActivity {
                 questionary.checkAnswer(userAnswers.toArray(new String[0]));
                 Question nextQuestion = questionary.getNextQuestion();
                 Intent nextIntent;
-                if(nextQuestion == null){
+                if (nextQuestion == null) {
                     nextIntent = new Intent(MultipleAnswersActivity.this, FinalActivity.class);
                 } else {
                     nextIntent = new Intent(MultipleAnswersActivity.this, nextQuestion.getActivity());
@@ -74,9 +75,6 @@ public class MultipleAnswersActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
 
     /**
      * Displays the given Question.
@@ -97,7 +95,6 @@ public class MultipleAnswersActivity extends AppCompatActivity {
     public void displayImage(Drawable imageResource) {
         ImageView imgResource = (ImageView) findViewById(R.id.multiple_img);
         imgResource.setImageDrawable(imageResource);
-
 
     }
 }
